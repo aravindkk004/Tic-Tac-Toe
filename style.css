@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: purple;
+}
+h1{
+    font-size: 5rem;
+    color: gold;
+    font-family: 'Lobster', sans-serif;
+}
+.boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 0px;
+}
+.box{
+    height: 130px;
+    width: 130px;
+    /* background-color: red; */
+    border: 5px solid yellow;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: white;
+    font-family: 'Lobster Two', sans-serif;
+}
+.box:nth-child(1){
+    border-width: 0px 5px 5px 0px;
+}
+.box:nth-child(2){
+    border-top: 0px;
+}
+.box:nth-child(3){
+    border-width: 0px 0px 5px 5px;
+}
+.box:nth-child(4){
+    border-width: 5px 5px 5px 0px;
+}
+.box:nth-child(6){
+    border-width: 5px 0px 5px 5px;
+}
+.box:nth-child(7){
+    border-width: 5px 5px 0px 0px;
+}
+.box:nth-child(8){
+    border-width: 5px 5px 0px 5px;
+}
+.box:nth-child(9){
+    border-width: 5px 0px 0px 5px;
+}
+button{
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: greenyellow;
+    font-size: 1.3rem;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-family:'Poppins', sans-serif;
+}
+button:hover{
+    color: red;
+    background-color: white;
+}
+.container p{
+    font-size: 1.2rem;
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+}
+.X{
+    position: absolute;
+    left: 10%;
+    display: none;
+}
+.O{
+    position: absolute;
+    right: 10%;
+    display: none;
+}
+.active{
+    display: block;
+}
+.restart,.startBtn{
+    display: none;
+}
+.disable{
+    display: block;
+}
+
+@media (max-width: 450px){
+    h1{
+        font-size: 3rem;
+    }
+    .box{
+        height: 90px;
+        width: 90px;
+        font-size: 3rem;
+    }
+    button{
+        font-size: 0.9rem;
+    }
+    #image{
+        display: none;
+    }
+}
